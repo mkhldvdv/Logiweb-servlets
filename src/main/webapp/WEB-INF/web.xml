@@ -1,0 +1,122 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <filter>
+    <filter-name>Login Filter</filter-name>
+    <filter-class>com.mkhldvdv.logiweb.filters.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Login Filter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ListDriversServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.ListDriversServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListDriversServlet</servlet-name>
+    <url-pattern>/listDrivers</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ListTrucksServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.ListTrucksServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListTrucksServlet</servlet-name>
+    <url-pattern>/listTrucks</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ListOrdersServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.ListOrdersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListOrdersServlet</servlet-name>
+    <url-pattern>/listOrders</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ListCargoServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.ListCargoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListCargoServlet</servlet-name>
+    <url-pattern>/listCargo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddEditUserServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.AddEditUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddEditUserServlet</servlet-name>
+    <url-pattern>/addEditUser</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddEditDeleteTruckServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.AddEditDeleteTruckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddEditDeleteTruckServlet</servlet-name>
+    <url-pattern>/addEditTruck</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DriversInfoServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.DriversInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DriversInfoServlet</servlet-name>
+    <url-pattern>/infoForDriver</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddCargoServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.AddCargoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCargoServlet</servlet-name>
+    <url-pattern>/addCargo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <servlet-class>com.mkhldvdv.logiweb.servlets.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <url-pattern>/addOrder</url-pattern>
+  </servlet-mapping>
+
+  <description>ServletContextListener</description>
+  <listener>
+    <listener-class>com.mkhldvdv.logiweb.listeners.PersistenceListener</listener-class>
+  </listener>
+
+</web-app>
